@@ -1,0 +1,172 @@
+:root {
+  --clr-primary-400: hsl(158, 36%, 37%);
+  --clr-primary-500: hsl(158, 36%, 20%);
+  --clr-secondary-200: hsl(30, 38%, 92%);
+
+  --clr-neutral-dark: hsl(212, 21%, 14%);
+  --clr-neutral-medium: hsl(228, 12%, 48%);
+  --clr-neutral-light: hsl(0, 0%, 100%);
+
+  --font-fam-accent: 'Fraunces', serif;
+  --font-fam-base: 'Montserrat', sans-serif;
+
+  --font-wt-regular: 500;
+  --font-wt-bold: 700;
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* General Styles */
+body {
+  font-family: var(--font-fam-base);
+  font-weight: var(--font-wt-regular);
+  font-size: 0.875rem;
+  color: var(--clr-neutral-medium);
+  background-color: var(--clr-secondary-200);
+
+  /* This here...figure this out */
+  display: grid;
+  place-items: center;
+  margin: 2rem auto;
+  min-height: 100vh;
+  width: 375px;
+}
+
+/* Utilities */
+#price-group {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* Button */
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  cursor: pointer;
+  padding: 0.75em 1.5rem;
+  border: 0;
+  text-decoration: none;
+  background-color: var(--clr-primary-400);
+  color: var(--clr-neutral-light);
+  font-size: 0.925rem;
+  border-radius: 0.5rem;
+}
+
+.button:hover {
+  background-color: var(--clr-primary-500);
+}
+
+.button img {
+  padding-right: 10px;
+}
+
+/* Product */
+.product {
+  display: grid;
+
+  background-color: var(--clr-neutral-light);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+@media (min-width: 600px) {
+  .product {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.product-info {
+  display: grid;
+  gap: 1rem;
+  padding: 1.5rem;
+}
+
+.product-category {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 0.8125rem;
+}
+
+.product-title {
+  font-size: 2rem;
+  font-family: var(--font-fam-accent);
+  color: var(--clr-neutral-dark);
+  line-height: 1;
+}
+
+.product-sale-price {
+  font-size: 2rem;
+  font-family: var(--font-fam-accent);
+  color: var(--clr-primary-400);
+}
+
+.product-original-price {
+  text-decoration: line-through;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
