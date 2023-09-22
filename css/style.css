@@ -11,7 +11,7 @@ body {
 }
 
 .container {
-  margin: 30px auto 0 auto;
+  /* margin: 30px auto 0 auto; */
   padding: 0 30px;
 
   /* to center card */
@@ -109,7 +109,7 @@ body {
   padding-bottom: 20px;
 }
 
-@media only screen and (max-width: 628px) {
+@media only screen and (max-width: 725px) {
   .product {
     grid-template-columns: 1fr;
   }
